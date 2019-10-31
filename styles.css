@@ -1,0 +1,231 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    font-weight: lighter;
+
+}
+
+.img_nav {
+    width: 90px;
+    height: auto;
+    padding: 5px 5px;
+}
+
+
+
+.logo_nav {
+    width: 20px;
+    height: auto;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+}
+
+.nav_main {
+
+    height: 75px;
+    width: 100vw;
+    background: white;
+    /* position: fixed; */
+    z-index: 10;
+    color: black;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu {
+    text-align: right;
+    width: 100%;
+    margin-right: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.music-style {
+    color: white;
+    height: 550px;
+    font-size: 50px;
+    font-weight: inherit;
+    background-image: url(Images/background-image.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding-top: 150px;
+}
+
+
+.container-btn {
+    font-size: 40px;
+    width: 600px;
+    height: 100px;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+    width: 350px;
+    height: 310px;
+    text-align: center;
+    border-radius: 8px;
+    background-image: radial-gradient(circle at center, rgba(255, 0, 0, 0), white);
+
+}
+
+.btn {
+    background: white;
+    font-size: 40px;
+    margin: 15px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.container-quizz {
+    font-size: 50px;
+    height: 700px;
+    margin: 0px 30px 100px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    color: white
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+.btn .quizz {
+    font-size: 30px;
+    margin: 40px 30px;
+    outline: none
+}
+
+button:hover {
+    cursor: pointer;
+    scroll-behavior: smooth;
+
+}
+
+button {
+    border-radius: 8px;
+    font-size: 20px
+}
+
+.start-next {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.start {
+    font-size: 20px
+}
+
+#next_question {
+    font-size: 20px;
+    margin: 20px;
+    border: none;
+    background-color: inherit;
+    color: white
+}
+
+#title_quizz_genre {
+    font-size: 75px;
+    text-decoration-color: coral;
+    color: white;
+    text-shadow: white 0.1em 0.1em 0.2em
+}
+
+.title {
+    font-size: 100px;
+    color: darkorchid;
+    text-shadow: white 0.1em 0.1em 0.2em
+}
+
+#start_game {
+    margin-top: 30px;
+    font-size: 20px
+}
+
+#reset_game {
+    font-size: 30px;
+    padding: 3px;
+}
+
+#loader {
+    height: 50vh;
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#loader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#volume {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    color: white;
+    margin-top: 15px
+}
+
+#score {
+    color: white
+}
+
+#btn_pause {
+    font-size: 15px
+}
+
+#btn_play {
+    font-size: 15px
+}
+
+#popup-final {
+    background: darkslateblue;
+    color: white;
+    text-shadow: white 0.1em 0.1em 0.2em;
+    z-index: 300;
+    font-size: 60px;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    text-align: center;
+}
