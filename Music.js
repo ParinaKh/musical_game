@@ -1,29 +1,16 @@
 import allQuestions from "./songs.js";
 
-//   https://media.giphy.com/media/r0XKA03tGOrGU/giphy.gif
-
 // // DOM VARS
 const btnsGenre = document.querySelectorAll(".container-btn .btn");
-const btna = document.querySelectorAll(".link");
 const containerQuizz = document.querySelector(".container-quizz");
-const containerBack = document.querySelector("#container_background");
 const containerGenres = document.querySelector(".music-style");
 const resetButtonLogo = document.getElementById("reset-logo");
 const resetButtonLink = document.getElementById("reset-link");
-const popupFinal = document.getElementById("popup-final");
-var loader = document.getElementById("loader");
-
-const tpl = `<h1 id="title_quizz_genre">
-      Welcome to the <span id="genre"></span> quizz 
-    </h1>
-    <button id="start_game">Start game</button>`;
 
 // GAME VARS
 var currentIndex = 0;
-var currentQuestions;
 var score = 0;
 var audio;
-var roundIndex;
 
 var filteredSongsbyGenre = [];
 
@@ -147,6 +134,7 @@ function finishGame() {
     containerQuizz.innerHTML += `<img src="https://media.giphy.com/media/ckGndVa23sCk9pae4l/giphy.gif">`;
   }
   console.log("End of the Round");
+  resetGame();
 }
 
 function resetGame() {
@@ -169,7 +157,6 @@ function initContainerQuizz() {
   displayQuizzGenre(genre);
   startButton.addEventListener("click", displayRoundQuestion);
 }
-function goNextROund() {}
 
 // // EVENT LISTENERS....
 
@@ -179,27 +166,11 @@ resetButtonLink.onclick = resetGame;
 btnsGenre.forEach(btn => {
   btn.onclick = evt => {
     const genre = evt.target.textContent;
-    console.log(genre);
     const questionsFilteredByGenre = filterByGenre(allQuestions, genre);
-    console.log(questionsFilteredByGenre);
     initContainerQuizz();
-    console.log(initContainerQuizz);
     containerQuizz.querySelector("#genre").textContent = genre;
-    containerQuizz.style.background = `url("Images/${genre}.jpg")`;
+    containerQuizz.style.background = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url("Images/${genre}.jpg")`;
     containerQuizz.style.backgroundSize = `cover`;
     containerQuizz.style.backgroundRepeat = `no-repeat`;
   };
 });
-
-// function PopupImage(img) {
-//   w = open(
-//     "",
-//     "image",
-//     "weigth=toolbar=no,scrollbars=no,resizable=yes, width=510, height=210"
-//   );
-//   w.document.write(
-//     '<HTML><BODY onblur="window.close();"><IMG src=\'' + img + "'>"
-//   );
-//   w.document.write("</BODY></HTML>");
-//   w.document.close();
-// }
