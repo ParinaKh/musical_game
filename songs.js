@@ -236,7 +236,7 @@ const songs = [
   },
   {
     title: "The Notorious B.I.G. - Juicy",
-    artists: ["2PAC", "P. Daddy", "The Notorious B.I.G."],
+    artists: ["2PAC", "P. Daddy", "The Notorious B.I.G"],
     genre: "RnB-RAP",
     answer: "The Notorious B.I.G",
     url: "soundtrack/the-notorious-big-juicy-official-music-video.mp3"

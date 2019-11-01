@@ -3,9 +3,15 @@ import allQuestions from "./songs.js";
 // // DOM VARS
 const btnsGenre = document.querySelectorAll(".container-btn .btn");
 const containerQuizz = document.querySelector(".container-quizz");
+const containerBack = document.querySelector("#container_background");
 const containerGenres = document.querySelector(".music-style");
 const resetButtonLogo = document.getElementById("reset-logo");
 const resetButtonLink = document.getElementById("reset-link");
+
+const tpl = `<h1 id="title_quizz_genre">
+      Welcome to the <span id="genre"></span> quizz 
+    </h1>
+    <button id="start_game">Start game</button>`;
 
 // GAME VARS
 var currentIndex = 0;
@@ -124,7 +130,7 @@ function displayRoundQuestion() {
 }
 
 function finishGame() {
-  if (score > 7) {
+  if (score > filteredSongsbyGenre.length * (2 / 3)) {
     containerQuizz.textContent = `Congratulations your score is ${score} / ${filteredSongsbyGenre.length}`;
     containerQuizz.innerHTML += `<img src="https://media.giphy.com/media/r0XKA03tGOrGU/giphy.gif"/>`;
   } else {
@@ -134,7 +140,6 @@ function finishGame() {
     containerQuizz.innerHTML += `<img src="https://media.giphy.com/media/ckGndVa23sCk9pae4l/giphy.gif">`;
   }
   console.log("End of the Round");
-  resetGame();
 }
 
 function resetGame() {
@@ -166,8 +171,11 @@ resetButtonLink.onclick = resetGame;
 btnsGenre.forEach(btn => {
   btn.onclick = evt => {
     const genre = evt.target.textContent;
+    console.log(genre);
     const questionsFilteredByGenre = filterByGenre(allQuestions, genre);
+    console.log(questionsFilteredByGenre);
     initContainerQuizz();
+    console.log(initContainerQuizz);
     containerQuizz.querySelector("#genre").textContent = genre;
     containerQuizz.style.background = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url("Images/${genre}.jpg")`;
     containerQuizz.style.backgroundSize = `cover`;
